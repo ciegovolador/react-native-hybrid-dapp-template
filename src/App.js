@@ -1,38 +1,54 @@
-import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-export default class App extends Component {
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+import React, { Component } from "react";
+import { Platform, StyleSheet, Text, View, } from "react-native";
+
+type Props = {};
+export default class App extends Component < Props > {
+  state = { loading: true, drizzleState: null };
+
+  componentDidMount() {
+    const { drizzle } = this.props;
+
+    this.unsubscribe = drizzle.store.subscribe(() => {
+      const drizzleState = drizzle.store.getState();
+
+      if (drizzleState.drizzleStatus.initialized) {
+        this.setState({ loading: false, drizzleState });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+
   render() {
     return (
-      <View style={styles.app}>
-        
-        <View style={styles.appHeader}>
-          <Text style={styles.appTitle}>Welcome to React </Text>
-        </View>
-        <Text style={styles.appIntro}>
-          To get started, edit src/App.js and save to reload.
-        </Text>
+      <View style={styles.container}>
+        {this.state.loading ? (
+          <Text>Loading Drizzle...</Text>
+        ) : (
+          <View>
+            <Text>Drizzle is ready</Text>
+          </View>
+        )}
       </View>
-    )
+    );
   }
 }
+
 const styles = StyleSheet.create({
-  app: {
-    flex: 1
-  },
-  appHeader: {
+  container: {
     flex: 1,
-    backgroundColor: '#222',
-    padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  appTitle: {
-    fontSize: 16,
-    color: 'white'
-  },
-  appIntro: {
-    flex: 2,
-    fontSize: 30,
-    textAlign: 'center'
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   }
-})
+});
