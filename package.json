@@ -1,0 +1,53 @@
+{
+  "name": "dappHybridTemplate",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start-web": "react-scripts start",
+    "build-web": "react-scripts build",
+    "test-web": "react-scripts test --env=jsdom",
+    "eject-web": "react-scripts eject",
+    "start-native": "react-native-scripts start",
+    "eject-native": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "npm run test-web && npm run test-native",
+    "storybook": "start-storybook -p 8082 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "dependencies": {
+    "Base64": "^1.0.2",
+    "expo": "^25.0.0",
+    "node-libs-react-native": "^1.0.3",
+    "react": "16.6.3",
+    "react-art": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-native": "0.52.0",
+    "react-native-randombytes": "^3.5.2",
+    "react-native-web": "^0.10.0",
+    "react-scripts": "^2.1.5",
+    "vm-browserify": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-preset-expo": "^5.0.0",
+    "flow-bin": "^0.94.0",
+    "metro-react-native-babel-preset": "0.53.0",
+    "react-native-scripts": "^2.0.1",
+    "react-test-renderer": "16.2.0",
+    "@storybook/react": "^4.1.13",
+    "@storybook/addon-actions": "^4.1.13",
+    "@storybook/addon-links": "^4.1.13",
+    "@storybook/addons": "^4.1.13",
+    "babel-loader": "^8.0.5"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
