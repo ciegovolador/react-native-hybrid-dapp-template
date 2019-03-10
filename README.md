@@ -30,7 +30,10 @@ nvm use latest
 npm install truffle -g 
 npm install ganache-cli -g 
 
-
+git clone 
+cd 
+yarn
 yarn ganache
 yarn migrate
+
 
