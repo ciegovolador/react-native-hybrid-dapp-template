@@ -8,9 +8,9 @@
 
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View, } from "react-native";
-import ReadString from "./ReadString";
-import SetString from "./SetString";
 
+import ReadString from "./components/ReadString";
+import SetString from "./components/SetString";
 type Props = {};
 export default class App extends Component < Props > {
   state = { loading: true, drizzleState: null };

@@ -13,7 +13,7 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "npm run test-web && npm run test-native",
-    "storybook": "start-storybook -p 8082 -s public",
+    "storybook": "start-storybook -p 8081 -s public",
     "build-storybook": "build-storybook -s public",
     "migrate": "cd src && truffle migrate",
     "ganache": "mkdir -p blockchain && ganache-cli -h $IP -p 8082 -m 'income shallow expand moon awake thunder pet dial chase fruit three change' --db blockchain"
