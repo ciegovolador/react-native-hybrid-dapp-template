@@ -16,7 +16,7 @@
     "storybook": "start-storybook -p 8082 -s public",
     "build-storybook": "build-storybook -s public",
     "migrate": "cd src && truffle migrate",
-    "ganache": "ganache-cli -h $IP -p 8082 -m 'income shallow expand moon awake thunder pet dial chase fruit three change' --db blockchain"
+    "ganache": "mkdir -p blockchain && ganache-cli -h $IP -p 8082 -m 'income shallow expand moon awake thunder pet dial chase fruit three change' --db blockchain"
   },
   "dependencies": {
     "Base64": "^1.0.2",
